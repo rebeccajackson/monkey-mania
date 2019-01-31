@@ -12,15 +12,14 @@ class Monkey extends React.Component{
     }
 
     eat = () => {
-        // this.state.satiation += 1
-        // if (this.state.satiation > 10) {
-        //     this.state.alive = false
-        // }
-        console.log(this.state.id)
+        this.state.satiation += 1
+        if (this.state.satiation > 10) {
+            this.state.alive = false
+        }
     }
 
     render (){
-        return (
+        return this.state.alive ? (
             <div className='monkey-page'>
                 <div className="bananasButton">
                     <div className="tree">
@@ -39,7 +38,7 @@ class Monkey extends React.Component{
                     Monkey
                 </div>
             </div>
-        )
+        ) : ''
     }
 }
 
