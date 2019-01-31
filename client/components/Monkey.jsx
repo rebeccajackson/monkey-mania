@@ -21,7 +21,7 @@ class Monkey extends React.Component{
         return (
             <div>
                 <div>
-                    <button onClick={console.log(1)}>Bananas</button>
+                    <button onClick={this.eat.bind(this)}>Bananas</button>
                 </div>
                 <div>
                     Monkey
