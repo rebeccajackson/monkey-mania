@@ -12,6 +12,7 @@ class Monkey extends React.Component{
 
         this.interval = setInterval(this.tickDown, 1000);
     }
+
     eat = () => {
         this.state.satiation += 1
         if (this.state.satiation > 10) {
@@ -28,7 +29,7 @@ class Monkey extends React.Component{
 
     componentWillUnmount() {
         clearInterval(this.interval);
-      }
+    }
 
     render (){
         const id = this.state.id
