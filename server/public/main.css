@@ -1,10 +1,15 @@
-.monkey-page{
-  background-color: forestgreen;
+.body{
   height: 100vh;
   width: 100vw;
   display: grid;
   grid-template: 'monkey1area . monkey2area . monkey3area ' 100vh
-    /2fr 10px 2fr 10px 2fr;
+        '. branch branch branch branch'
+    /2fr 10px 2fr 10px 2fr ;
+}
+
+.background-image{
+background-image: url(/images/jungle.jpg);
+z-index: -1;
 }
 
 .monkey1area{
@@ -15,6 +20,9 @@
 }
 .monkey3area{
   grid-area: monkey3area;
+}
+.branch{
+  grid-area: branch;
 }
 
 .monkey-area{
@@ -55,8 +63,6 @@
 	        animation: bounce-out-bottom 1.5s ease-in-out 500ms both;
 }
 
-.bananasButton :hover{
-    -webkit-animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) alternate both;
-            animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) alternate both;
-  }
-}
+.shake-top:hover {
+  animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}     
