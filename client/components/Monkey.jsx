@@ -23,19 +23,12 @@ class Monkey extends React.Component{
         return (
             <div className='monkey-page'>
                 <div className="bananasButton">
-                    <div className="tree">
-                        <img src="/images/tree" alt="Tree"/>
-                    </div>
-                    <div className="branch">
-                        <img src="/images/branch" alt="Branch"/>
-                    </div>
                     <button onClick={this.eat.bind(this)}>
-                        bananas
                         <img src="/images/bananas.png" alt="Bananas"/>
                     </button>
                 </div>
                 <div>
-                    <img src="/images/monkey1.png" alt="Curious George"/>
+                    <img className='bounce-out-bottom' src="/images/monkey1.png" alt="Curious George"/>
                     Monkey
                 </div>
             </div>
