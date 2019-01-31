@@ -4,7 +4,7 @@ import Monkey from './Monkey'
 
 const App = () => {
   return (
-    <div>
+    <div className='body'>
       <h1>React development has begun!</h1>
       <Monkey />
     </div>
