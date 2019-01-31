@@ -1,12 +1,53 @@
-.body{
-  background-color: forestgreen;
-}
-
 .monkey-page{
+  background-color: forestgreen;
   height: 100vh;
   width: 100vw;
   display: grid;
-  
+  grid-template: 'monkey1area . monkey2area . monkey3area ' 100vh
+    /2fr 10px 2fr 10px 2fr;
+}
+
+.monkey1area{
+  grid-area: monkey1area;
+}
+.monkey2area{
+  grid-area: monkey2area;
+}
+.monkey3area{
+  grid-area: monkey3area;
+}
+
+.monkey-area{
+
+  display: grid;
+  grid-template: '. banana1 . banana2 . banana3 .' 50px
+    '. monkey1 . monkey2 . monkey3 .' 300px
+    /5px 1fr 5px 1fr 5px 1fr 5px;
+  grid-row-gap: 20vh;
+}
+
+.banana1{
+  grid-area: banana1;
+}
+.banana2{
+  grid-area: banana2;
+}
+.banana3{
+  grid-area: banana3;
+}
+
+.tree{
+  grid-area: tree;
+}
+
+.monkey1{
+  grid-area: monkey1;
+}
+.monkey2{
+  grid-area: monkey2;
+}
+.monkey3{
+  grid-area: monkey3;
 }
 
 .bounce-out-bottom {

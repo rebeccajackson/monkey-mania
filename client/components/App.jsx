@@ -11,9 +11,11 @@ const App = () => {
       <div className="branch">
           <img src="/images/branch" alt="Branch"/>
       </div>
-      <Monkey id='1' />
-      <Monkey id='2' />
-      <Monkey id='3' />
+      <div className='monkey-page'>
+        <Monkey id='1' />
+        <Monkey id='2' />
+        <Monkey id='3' />
+      </div>
     </div>
   )
 }
