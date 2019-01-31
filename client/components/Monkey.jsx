@@ -5,16 +5,18 @@ class Monkey extends React.Component{
         super(props)
 
         this.state = {
+            id: this.props.id,
             satiation: 5,
             alive: true
         }
     }
 
     eat = () => {
-        this.state.satiation += 1
-        if (this.state.satiation > 10) {
-            this.state.alive = false
-        }
+        // this.state.satiation += 1
+        // if (this.state.satiation > 10) {
+        //     this.state.alive = false
+        // }
+        console.log(this.state.id)
     }
 
     render (){
