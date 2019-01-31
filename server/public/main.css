@@ -8,3 +8,8 @@
   display: grid;
   
 }
+
+.bounce-out-bottom {
+	-webkit-animation: bounce-out-bottom 1.5s ease-in-out 500ms both;
+	        animation: bounce-out-bottom 1.5s ease-in-out 500ms both;
+}

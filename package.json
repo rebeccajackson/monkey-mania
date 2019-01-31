@@ -9,9 +9,14 @@
   "scripts": {
     "client": "webpack-dev-server --hot --inline",
     "dev": "node server & webpack --watch",
+<<<<<<< HEAD
     "server": "node server",
+=======
+    "server": "node server --watch",
+>>>>>>> c5df6c8023a91d97b6d6f5511065cb3358216334
     "start": "webpack --watch",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "win": ""
   },
   "babel": {
     "presets": [
