@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Monkey from './Monkey'
+import Meter from './Meter';
 
 class App extends React.Components{
   render(){
@@ -8,6 +9,9 @@ class App extends React.Components{
     <div className='body'>
       <div className="tree">
         <img src="/images/tree" alt="Tree"/>
+      </div>
+      <div>
+        <Meter percent={0.5}/>
       </div>
       <div className="branch">
           <img src="/images/branch" alt="Branch"/>
@@ -17,6 +21,7 @@ class App extends React.Components{
         <Monkey id='2' />
         <Monkey id='3' />
       </div>
+
     </div>
     )
   }
