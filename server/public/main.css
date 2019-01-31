@@ -54,3 +54,9 @@
 	-webkit-animation: bounce-out-bottom 1.5s ease-in-out 500ms both;
 	        animation: bounce-out-bottom 1.5s ease-in-out 500ms both;
 }
+
+.bananasButton :hover{
+    -webkit-animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) alternate both;
+            animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) alternate both;
+  }
+}
