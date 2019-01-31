@@ -5,15 +5,27 @@ class Monkey extends React.Component{
         super(props)
 
         this.state = {
-            hunger: 5,
+            satiation: 5,
             alive: true
+        }
+    }
+
+    eat = () => {
+        this.state.satiation += 1
+        if (this.state.satiation > 10) {
+            this.state.alive = false
         }
     }
 
     render (){
         return (
             <div>
-                Monkey
+                <div>
+                    <button onClick={console.log(1)}>Bananas</button>
+                </div>
+                <div>
+                    Monkey
+                </div>
             </div>
         )
     }
