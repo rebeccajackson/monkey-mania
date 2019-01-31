@@ -12,7 +12,6 @@ class Monkey extends React.Component{
 
         this.interval = setInterval(this.tickDown, 1000);
     }
-
     eat = () => {
         this.state.satiation += 1
         if (this.state.satiation > 10) {
@@ -32,16 +31,16 @@ class Monkey extends React.Component{
       }
 
     render (){
+        const id = this.state.id
         return this.state.alive ? (
-            <div className='monkey-page'>
-                <div className="bananasButton">
+            <div className={`monkey${id}area`}>
+                <div className={`bananasButton banana${id}`}>
                     <button onClick={this.eat.bind(this)}>
                         <img src="/images/bananas.png" alt="Bananas"/>
                     </button>
                 </div>
-                <div>
-                    <img className='bounce-out-bottom' src="/images/monkey1.png" alt="Curious George"/>
-                    Monkey
+                <div className={`monkey${id} bounce-out-bottom`}>
+                    <img  src={`/images/monkey${id}.png`} alt="Curious George"/>
                 </div>
             </div>
         ) : ''
