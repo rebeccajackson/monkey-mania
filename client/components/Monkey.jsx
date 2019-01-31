@@ -14,7 +14,7 @@ class Monkey extends React.Component{
     eat = () => {
         this.state.satiation += 1
         if (this.state.satiation > 10) {
-            this.state.alive = false
+            this.setState({alive:false})
         }
     }
 
