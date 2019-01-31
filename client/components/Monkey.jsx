@@ -9,6 +9,8 @@ class Monkey extends React.Component{
             satiation: 5,
             alive: true
         }
+
+        this.interval = setInterval(this.tickDown, 1000);
     }
     eat = () => {
         this.state.satiation += 1
@@ -16,7 +18,18 @@ class Monkey extends React.Component{
             this.setState({alive:false})
         }
     }
-    
+
+    tickDown = () => {
+        this.state.satiation -= 1
+        if (this.state.satiation <= 0) {
+            this.setState({alive:false})
+        }
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
+      }
+
     render (){
         const id = this.state.id
         return this.state.alive ? (
