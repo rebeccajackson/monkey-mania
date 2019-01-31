@@ -11,17 +11,15 @@ class Monkey extends React.Component{
         }
     }
     eat = () => {
-        // this.state.satiation += 1
-        // if (this.state.satiation > 10) {
-        //     this.state.alive = false
-        // }
-     
+        this.state.satiation += 1
+        if (this.state.satiation > 10) {
+            this.setState({alive:false})
+        }
     }
     
     render (){
         const id = this.state.id
-        console.log(id)
-        return (
+        return this.state.alive ? (
             <div className={`monkey${id}area`}>
                 <div className={`bananasButton banana${id}`}>
                     <button onClick={this.eat.bind(this)}>
@@ -32,7 +30,7 @@ class Monkey extends React.Component{
                     <img  src={`/images/monkey${id}.png`} alt="Curious George"/>
                 </div>
             </div>
-        )
+        ) : ''
     }
 }
 
