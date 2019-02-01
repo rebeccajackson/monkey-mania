@@ -10,7 +10,7 @@ class Monkey extends React.Component{
             alive: true
         }
 
-        this.interval = setInterval(this.tickDown, 100000);
+        this.interval = setInterval(this.tickDown, 10000);
     }
 
     eat = () => {
@@ -38,13 +38,13 @@ class Monkey extends React.Component{
     render (){
         const id = this.state.id
         return this.state.alive ? (
-            <div className={`monkey${id}area`}>
+            <div className={`monkey${id}area flexMonkey`}>
                 
-                <div className={`banana${id}`} onClick={this.eat.bind(this)}>
+                <div className={`banana${id} alignBanana`} onClick={this.eat.bind(this)}>
                     <img className='shake-top' src="/images/bananas.png" alt="Bananas"/>
                 </div>
-
-                <div className={`monkey${id} bounce-out-bottom`}>
+                
+                <div className={`monkey${id} jumpingMonkey`}>
                     <img  src={`/images/monkey${id}.png`} alt="Curious George"/>
                 </div>
             </div>
