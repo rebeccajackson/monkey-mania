@@ -12,23 +12,28 @@ class Monkey extends React.Component{
 
         this.interval = setInterval(this.tickDown, 100000);
     }
+
     eat = () => {
         this.state.satiation += 1
         if (this.state.satiation > 10) {
             this.setState({alive:false})
+            clearInterval(this.interval);
         }
+        this.props.sendHunger(this.state.id, this.state.satiation)
     }
 
     tickDown = () => {
         this.state.satiation -= 1
         if (this.state.satiation <= 0) {
             this.setState({alive:false})
+            clearInterval(this.interval);
         }
+        this.props.sendHunger(this.state.id, this.state.satiation)
     }
 
     componentWillUnmount() {
         clearInterval(this.interval);
-      }
+    }
 
     render (){
         const id = this.state.id

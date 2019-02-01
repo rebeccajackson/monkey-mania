@@ -1,4 +1,4 @@
-.body{
+.monkey-page{
   height: 100vh;
   width: 100vw;
   display: grid;
@@ -8,8 +8,15 @@
 }
 
 .background-image{
-background-image: url(/images/jungle.jpg);
-z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  background-image: url(/images/jungle.jpg);
+  position: absolute;
+  -webkit-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: blur(5px);
+  background-size: cover;
 }
 
 .monkey1area{
