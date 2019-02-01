@@ -49,20 +49,6 @@
   grid-area: banana3;
 }
 
-.tree{
-  grid-area: tree;
-}
-
-.monkey1{
-  grid-area: monkey1;
-}
-.monkey2{
-  grid-area: monkey2;
-}
-.monkey3{
-  grid-area: monkey3;
-}
-
 .jumpingMonkey {
   display: flex;
   align-items: flex-end;
@@ -74,6 +60,16 @@
   align-items: flex-start;
   justify-content: center;
 }
+
+.roll-out-bottom{
+  -webkit-animation:roll-out-bottom .6s ease-in both;animation:roll-out-bottom .6s ease-in both
+}
+
+ @-webkit-keyframes roll-out-bottom{0%{-webkit-transform:translateY(0) rotate(0deg);transform:translateY(0) rotate(0deg);opacity:1}100%{-webkit-transform:translateY(800px) rotate(540deg);transform:translateY(800px) rotate(540deg);opacity:0}}@keyframes roll-out-bottom{0%{-webkit-transform:translateY(0) rotate(0deg);transform:translateY(0) rotate(0deg);opacity:1}100%{-webkit-transform:translateY(800px) rotate(540deg);transform:translateY(800px) rotate(540deg);opacity:0}}
+
+
+
+
 .shake-top {
   width: 7em;
   height: 7em;

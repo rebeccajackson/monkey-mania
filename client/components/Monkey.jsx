@@ -11,9 +11,9 @@ class Monkey extends React.Component{
         }
 
         this.interval = setInterval(this.tickDown, 3000);
-
+        
     }
-
+    
     eat = () => {
         this.state.satiation += 1
         if (this.state.satiation > 10) {
@@ -22,6 +22,7 @@ class Monkey extends React.Component{
         }
         this.props.sendHunger(this.state.id, this.state.satiation)
     }
+    
 
     tickDown = () => {
         this.state.satiation -= 1
@@ -30,12 +31,13 @@ class Monkey extends React.Component{
             clearInterval(this.interval);
         }
         this.props.sendHunger(this.state.id, this.state.satiation)
+        
     }
-
+    
     componentWillUnmount() {
         clearInterval(this.interval);
     }
-
+    
     render (){
         const id = this.state.id
         return this.state.alive ? (
@@ -44,12 +46,15 @@ class Monkey extends React.Component{
                 <div className={`banana${id} alignBanana`} onClick={this.eat.bind(this)}>
                     <img className='shake-top' src="/images/bananas.png" alt="Bananas"/>
                 </div>
-                
+
                 <div className={`monkey${id} jumpingMonkey`}>
                     <img  src={`/images/monkey${id}.png`} alt="Curious George"/>
                 </div>
+            </div>  
+            ) : 
+            <div className={`monkey${id}area`}>
+              <img className={`roll-out-bottom`} src={`/images/monkey${id}.png`} alt="Curious George"/>
             </div>
-        ) : ''
     }
 }
 
