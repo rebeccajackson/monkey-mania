@@ -8,8 +8,8 @@ const Meter = (props) => {
 
     var {
         percent = 0,        //number: 0-1, inclusive. fill%
-        width = 100,        //width of the meter
-        height = 10,        //height of the meter
+        width = 600,        //width of the meter
+        height = 50,        //height of the meter
         color = '#0078bc',  //fill colour
         label = null       //a label for accessibility
     } = props

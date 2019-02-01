@@ -10,7 +10,7 @@ class Monkey extends React.Component{
             alive: true
         }
 
-        this.interval = setInterval(this.tickDown, 100000);
+        this.interval = setInterval(this.tickDown, 3000);
     }
 
     eat = () => {
