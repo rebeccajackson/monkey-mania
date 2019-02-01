@@ -32,19 +32,16 @@ class App extends React.Component{
   render(){
     return (
     <div className='body'>
-    <div className="background-image"></div>
+      <div className="background-image"></div>
       <div>
         <Meter percent={this.state.avgHunger}/>
-      </div>
-      <div className="branch">
-          <img src="/images/branch" alt="Branch"/>
       </div>
       <div className='monkey-page'>
         <Monkey id='2' sendHunger={this.getHunger}/>
         <Monkey id='1' sendHunger={this.getHunger}/>
         <Monkey id='3' sendHunger={this.getHunger}/>
         <div className='branch'>
-          <img src="/images/branch.svg" alt="Branch"/>
+          <img className='branchimg' src="/images/branch.svg" alt="Branch"/>
         </div>
       </div>
 
